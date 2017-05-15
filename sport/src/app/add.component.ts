@@ -1,21 +1,16 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'Add',
+  templateUrl: './add.component.html',
   styleUrls: ['./app.component.css']
 })
 
 
-export class AppComponent {
+export class AddComponent {
   title = 'System monitorowania wyników sportowych !';
   buttonAdd ='Dodaj'; 
 }
-
-
-
-
-
 
 
 
