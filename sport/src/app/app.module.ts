@@ -5,24 +5,20 @@ import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
-import { AddComponent } from './add.component';
 
-import { RouterModule, Routes } from '@angular/router';
 
-const appRoutes: Routes = [
-  { path: 'add', component: AddComponent }
-];
+
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AddComponent    
+    AppComponent        
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
