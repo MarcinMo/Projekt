@@ -14,7 +14,7 @@ export class MeczeComponent implements OnInit {
   selectedMecz: Mecz;
 
   constructor(
-    private meczeService: MeczService,
+    private meczService: MeczService,
     private router: Router) { }
 
   getMecze(): void {
