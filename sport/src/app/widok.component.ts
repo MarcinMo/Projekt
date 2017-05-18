@@ -4,7 +4,7 @@ import { Mecz }        from './mecz';
 import { MeczService } from './mecz.service';
 
 @Component({
-  selector: 'my-widok',
+  selector:    'my-widok',
   templateUrl: './widok.component.html',
   styleUrls: [ './widok.component.css' ]
 })

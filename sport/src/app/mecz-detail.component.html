@@ -1,0 +1,11 @@
+<div *ngIf="mecz">
+  <h2>{{mecz.name}} details!</h2>
+  <div>
+    <label>id: </label>{{mecz.id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="mecz.name" placeholder="name" />
+   </div>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+</div>

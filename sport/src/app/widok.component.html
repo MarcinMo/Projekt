@@ -1,0 +1,9 @@
+<h3>Top Meczy</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let mecz of mecze"  [routerLink]="['/detail', mecz.id]"  class="col-1-4">
+    <div class="module mecz">
+      <h4>{{mecz.name}}</h4>
+    </div>
+  </a>
+</div>
+<mecz-search></mecz-search>

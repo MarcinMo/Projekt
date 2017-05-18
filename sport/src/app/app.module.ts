@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 
-import { AppComponent } from './app.component';
+import { AppComponent }        from './app.component';
+import { AppRoutingModule }    from './app-routing.module';
 
-
-import { WidokComponent }      from './widok.component';
+import { WidokComponent }       from './widok.component';
 import { MeczeComponent }       from './mecze.component';
 import { MeczDetailComponent }  from './mecz-detail.component';
 import { MeczService }          from './mecz.service';
@@ -28,9 +28,10 @@ import { MeczSearchComponent }  from './mecz-search.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule    
+    HttpModule,
+    AppRoutingModule    
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ MeczService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

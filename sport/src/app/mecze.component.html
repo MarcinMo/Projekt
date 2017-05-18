@@ -1,0 +1,22 @@
+<h2>My Mecze</h2>
+<div>
+  <label>Mecz name:</label> <input #meczName />
+  <button (click)="add(meczName.value); meczName.value=''">
+    Add
+  </button>
+</div>
+<ul class="mecze">
+  <li *ngFor="let mecz of mecze" (click)="onSelect(mecz)"
+      [class.selected]="mecz === selectedMecz">
+    <span class="badge">{{mecz.id}}</span>
+    <span>{{mecz.name}}</span>
+    <button class="delete"
+      (click)="delete(mecz); $event.stopPropagation()">x</button>
+  </li>
+</ul>
+<div *ngIf="selectedMecz">
+  <h2>
+    {{selectedMecz.name | uppercase}} is my mecz
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
