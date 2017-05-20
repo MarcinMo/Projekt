@@ -7,7 +7,7 @@ import { Mecz }        from './mecz';
 import { MeczService } from './mecz.service';
 
 @Component({
-  selector: 'mecz-detail',
+  selector:    'mecz-detail',
   templateUrl: './mecz-detail.component.html',
   styleUrls: [ './mecz-detail.component.css' ]
 })

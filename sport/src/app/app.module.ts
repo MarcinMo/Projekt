@@ -15,6 +15,8 @@ import { MeczSearchComponent }  from './mecz-search.component';
 
 
 
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DaneService }  from './dane.service';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { MeczSearchComponent }  from './mecz-search.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule    
+    AppRoutingModule,
+    InMemoryWebApiModule.forRoot(DaneService)
+
   ],
   providers: [ MeczService ],
   bootstrap: [ AppComponent ]
