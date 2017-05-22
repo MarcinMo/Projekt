@@ -1,9 +1,9 @@
 export class Mecz {
   id: number;
-  name: string;
- // team2: string;
- // score: string;
- // description: string;
+  team1: string;
+  team2: string;
+  score: string;
+  description: string;
 }
 
 

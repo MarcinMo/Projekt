@@ -1,11 +1,24 @@
 <div *ngIf="mecz">
-  <h2>{{mecz.name}} details!</h2>
+  <h2>{{mecz.team1}} details!</h2>
   <div>
     <label>id: </label>{{mecz.id}}</div>
   <div>
-    <label>name: </label>
-    <input [(ngModel)]="mecz.name" placeholder="name" />
+    <label>drużyna: </label>
+    <input [(ngModel)]="mecz.team1" placeholder="team1" />
    </div>
+  <div>
+    <label>drużyna: </label>
+    <input [(ngModel)]="mecz.team2" placeholder="team2" />
+   </div>
+     <div>
+    <label>wynik: </label>
+    <input [(ngModel)]="mecz.score" placeholder="score" />
+   </div>
+    <div>
+    <label>opis: </label>
+    <input [(ngModel)]="mecz.description" placeholder="description" />
+   </div>
+
   <button (click)="goBack()">Back</button>
   <button (click)="save()">Save</button>
 </div>

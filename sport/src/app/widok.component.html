@@ -2,7 +2,9 @@
 <div class="grid grid-pad">
   <a *ngFor="let mecz of mecze"  [routerLink]="['/detail', mecz.id]"  class="col-1-4">
     <div class="module mecz">
-      <h4>{{mecz.name}}</h4>
+      <h4>{{mecz.team1}}</h4>
+      <h4>{{mecz.team2}}</h4>
+      <h4>{{mecz.score}}</h4>
     </div>
   </a>
 </div>

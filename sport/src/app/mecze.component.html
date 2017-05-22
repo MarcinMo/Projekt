@@ -1,22 +1,39 @@
 <h2>My Mecze</h2>
 <div>
-  <label>Mecz name:</label> <input #meczName />
-  <button (click)="add(meczName.value); meczName.value=''">
+  <label>Nazwa drużyny:</label> <input #meczName />
+  <div>
+  <label>Nazwa drużyny:</label> <input #meczName />
+</div>
+  <div>
+  <label>Wynik meczu:</label> <input #meczName />
+</div>
+  <div>
+  <label>Opis meczu:</label> <input #meczName />
+</div>
+
+
+
+<div>
+    <button (click)="add(meczName.value);meczName.value=''"> 
+ 
     Add
   </button>
-</div>
+  </div>
 <ul class="mecze">
   <li *ngFor="let mecz of mecze" (click)="onSelect(mecz)"
       [class.selected]="mecz === selectedMecz">
     <span class="badge">{{mecz.id}}</span>
-    <span>{{mecz.name}}</span>
+    <span>{{mecz.team1}}</span>
+    <span>{{mecz.team2}}</span>
+    <span>{{mecz.score}}</span>
+    <span>{{mecz.description}}</span>
     <button class="delete"
       (click)="delete(mecz); $event.stopPropagation()">x</button>
   </li>
 </ul>
 <div *ngIf="selectedMecz">
   <h2>
-    {{selectedMecz.name | uppercase}} is my mecz
+    {{selectedMecz.team1 | uppercase}} is my mecz
   </h2>
   <button (click)="gotoDetail()">View Details</button>
 </div>
