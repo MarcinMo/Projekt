@@ -23,10 +23,14 @@ export class MeczeComponent implements OnInit {
         .then(mecze => this.mecze = mecze);
   }
 
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.meczService.create(name)
+  add(team1: string, team2: string, score: string, description: string): void {
+    team1 = team1.trim();
+    team2 = team2.trim();
+    score = score.trim();
+    description = description.trim();
+
+    if (!team1 && !team2 && !score && !description) { return; }
+    this.meczService.create(team1,team2,score,description)
       .then(mecz => {
         this.mecze.push(mecz);
         this.selectedMecz = null;

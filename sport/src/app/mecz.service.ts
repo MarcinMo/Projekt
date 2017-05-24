@@ -37,9 +37,9 @@ export class MeczService {
       .catch(this.handleError);
   }
 
-  create( team1: string ): Promise<Mecz> {
+  create( team1: string, team2: string ,score: string, description: string): Promise<Mecz> {
     return this.http
-      .post(this.meczeUrl, JSON.stringify({ team1:team1 }), {headers: this.headers})
+      .post(this.meczeUrl, JSON.stringify({ team1:team1, team2:team2,score:score,description:description }), {headers: this.headers})
       .toPromise()
       .then(res => res.json().data as Mecz)
       .catch(this.handleError);

@@ -2,19 +2,19 @@
 <div>
   <label>Nazwa drużyny:</label> <input #meczName />
   <div>
-  <label>Nazwa drużyny:</label> <input #meczName />
+  <label>Nazwa drużyny:</label> <input #meczName1 />
 </div>
   <div>
-  <label>Wynik meczu:</label> <input #meczName />
+  <label>Wynik meczu:</label> <input #meczName2 />
 </div>
   <div>
-  <label>Opis meczu:</label> <input #meczName />
+  <label>Opis meczu:</label> <input #meczName3 />
 </div>
 
 
 
 <div>
-    <button (click)="add(meczName.value);meczName.value=''"> 
+    <button (click)="add(meczName.value,meczName1.value,meczName2.value,meczName3.value);meczName.value='';meczName1.value='';meczName2.value='';meczName3.value=''"> 
  
     Add
   </button>
